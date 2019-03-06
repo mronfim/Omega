@@ -1,12 +1,14 @@
 #pragma once
 
+#include "Core.h"
+
 #include <memory>
 
-#include <spdlog/spdlog.h>
+#include "spdlog/spdlog.h"
 
 namespace Omega {
 
-	class Log
+	class OMEGA_API Log
 	{
 	public:
 		static void Init();

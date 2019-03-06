@@ -8,11 +8,11 @@ workspace "Omega"
 		"Dist"
 	}
 
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-${cfg.architecture}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Omega"
 	location "Omega"
-	kind "ConsoleApp"
+	kind "SharedLib"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -26,6 +26,7 @@ project "Omega"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -36,13 +37,13 @@ project "Omega"
 
 		defines
 		{
-			"OMG_PLATFORM_WINDOWS"
-			--"OMG_BUILD_DLL"
+			"OMG_PLATFORM_WINDOWS",
+			"OMG_BUILD_DLL"
 		}
 
 		postbuildcommands
 		{
-			--("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -56,8 +57,6 @@ project "Omega"
 	filter "configurations:Dist"
 		defines "OMG_DIST"
 		optimize "On"
-
---[===[
 
 project "Sandbox"
 	location "Sandbox"
@@ -105,5 +104,3 @@ project "Sandbox"
 	filter "configurations:Dist"
 		defines "OMG_DIST"
 		optimize "On"
-
-]===]
