@@ -18,6 +18,9 @@ project "Omega"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "omgpch.h"
+	pchsource "Omega/src/omgpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
