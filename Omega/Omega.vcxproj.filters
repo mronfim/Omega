@@ -4,6 +4,15 @@
     <Filter Include="Omega">
       <UniqueIdentifier>{8E10D20D-FA24-FABE-C3A6-9D1E2F7AF6EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Omega\Events">
+      <UniqueIdentifier>{B2D0D902-9E33-69A7-47B9-A15D33FB342A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Omega.h" />
@@ -16,13 +25,28 @@
     <ClInclude Include="src\Omega\EntryPoint.h">
       <Filter>Omega</Filter>
     </ClInclude>
+    <ClInclude Include="src\Omega\Events\ApplicationEvent.h">
+      <Filter>Omega\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Omega\Events\Event.h">
+      <Filter>Omega\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Omega\Events\KeyEvent.h">
+      <Filter>Omega\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Omega\Events\MouseEvent.h">
+      <Filter>Omega\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Omega\Log.h">
       <Filter>Omega</Filter>
     </ClInclude>
+    <ClInclude Include="src\Omega\Window.h">
+      <Filter>Omega</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\omgpch.h" />
-    <ClInclude Include="src\Omega\Events\Event.h" />
-    <ClInclude Include="src\Omega\Events\KeyEvent.h" />
-    <ClInclude Include="src\Omega\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Omega\Application.cpp">
@@ -30,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Omega\Log.cpp">
       <Filter>Omega</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\omgpch.cpp" />
   </ItemGroup>

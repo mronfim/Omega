@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Omega/Log.h"
+
 
 #ifdef OMG_PLATFORM_WINDOWS
 
