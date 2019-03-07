@@ -150,6 +150,9 @@
     <ClInclude Include="src\Omega\Application.h" />
     <ClInclude Include="src\Omega\Core.h" />
     <ClInclude Include="src\Omega\EntryPoint.h" />
+    <ClInclude Include="src\Omega\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Omega\Events\Event.h" />
+    <ClInclude Include="src\Omega\Events\KeyEvent.h" />
     <ClInclude Include="src\Omega\Log.h" />
     <ClInclude Include="src\omgpch.h" />
   </ItemGroup>

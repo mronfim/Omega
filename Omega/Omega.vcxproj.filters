@@ -20,6 +20,9 @@
       <Filter>Omega</Filter>
     </ClInclude>
     <ClInclude Include="src\omgpch.h" />
+    <ClInclude Include="src\Omega\Events\Event.h" />
+    <ClInclude Include="src\Omega\Events\KeyEvent.h" />
+    <ClInclude Include="src\Omega\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Omega\Application.cpp">
